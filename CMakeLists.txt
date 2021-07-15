@@ -545,8 +545,10 @@ message("=======================================================================
         message(">> lava-triangle")
 
         set(TRIANGLE_SHADERS
-                res/triangle/triangle.frag
-                res/triangle/triangle.vert
+                res/triangle/glsl/triangle.frag
+                res/triangle/glsl/triangle.vert
+                res/triangle/hlsl/triangle.frag
+                res/triangle/hlsl/triangle.vert
                 )
 
         add_executable(lava-triangle 
