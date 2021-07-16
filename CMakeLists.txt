@@ -545,10 +545,10 @@ message("=======================================================================
         message(">> lava-triangle")
 
         set(TRIANGLE_SHADERS
-                res/triangle/glsl/triangle.frag
-                res/triangle/glsl/triangle.vert
-                res/triangle/hlsl/triangle.frag
-                res/triangle/hlsl/triangle.vert
+                res/triangle/glsl/triangle.glsl.frag
+                res/triangle/glsl/triangle.glsl.vert
+                res/triangle/hlsl/triangle.hlsl.frag
+                res/triangle/hlsl/triangle.hlsl.vert
                 )
 
         add_executable(lava-triangle 
@@ -566,10 +566,14 @@ message("=======================================================================
         message(">> lava-generic-triangle")
 
         set(GENERIC_TRIANGLE_SHADERS
-                res/generic_triangle/triangle.frag
-                res/generic_triangle/lava_triangle.vert
-                res/generic_triangle/int_triangle.vert
-                res/generic_triangle/double_triangle.vert
+                res/generic_triangle/glsl/triangle.glsl.frag
+                res/generic_triangle/glsl/lava_triangle.glsl.vert
+                res/generic_triangle/glsl/int_triangle.glsl.vert
+                res/generic_triangle/glsl/double_triangle.glsl.vert
+                res/generic_triangle/hlsl/triangle.hlsl.frag
+                res/generic_triangle/hlsl/lava_triangle.hlsl.vert
+                res/generic_triangle/hlsl/int_triangle.hlsl.vert
+                res/generic_triangle/hlsl/double_triangle.hlsl.vert
                 )
 
         add_executable(lava-generic-triangle
@@ -587,8 +591,11 @@ message("=======================================================================
         message(">> lava-shapes")
 
         set(SHAPES_SHADERS
-                res/shapes/shapes.frag
-                res/shapes/shapes.vert)
+                res/shapes/glsl/shapes.glsl.frag
+                res/shapes/glsl/shapes.glsl.vert
+                # res/shapes/hlsl/shapes.hlsl.frag
+                # res/shapes/hlsl/shapes.hlsl.vert
+                )
 
         add_executable(lava-shapes
                 ${LIBLAVA_DEMO_DIR}/shapes.cpp
@@ -604,8 +611,10 @@ message("=======================================================================
         message(">> lava-lamp")
 
         set(LAMP_SHADERS
-                res/lamp/lamp.frag
-                res/lamp/lamp.vert
+                res/lamp/glsl/lamp.glsl.frag
+                res/lamp/glsl/lamp.glsl.vert
+                # res/lamp/hlsl/lamp.hlsl.frag
+                # res/lamp/hlsl/lamp.hlsl.vert
                 )
 
         add_executable(lava-lamp 
@@ -623,8 +632,10 @@ message("=======================================================================
         message(">> lava-spawn")
 
         set(SPAWN_SHADERS
-                res/spawn/spawn.frag
-                res/spawn/spawn.vert
+                res/spawn/glsl/spawn.glsl.frag
+                res/spawn/glsl/spawn.glsl.vert
+                # res/spawn/hlsl/spawn.hlsl.frag
+                # res/spawn/hlsl/spawn.hlsl.vert
                 )
 
         add_executable(lava-spawn 
@@ -642,10 +653,14 @@ message("=======================================================================
         message(">> lava-light")
 
         set(LIGHT_SHADERS
-                res/light/gbuffer.frag
-                res/light/gbuffer.vert
-                res/light/lighting.frag
-                res/light/lighting.vert
+                res/light/glsl/gbuffer.glsl.frag
+                res/light/glsl/gbuffer.glsl.vert
+                res/light/glsl/lighting.glsl.frag
+                res/light/glsl/lighting.glsl.vert
+                # res/light/hlsl/gbuffer.hlsl.frag
+                # res/light/hlsl/gbuffer.hlsl.vert
+                # res/light/hlsl/lighting.hlsl.frag
+                # res/light/hlsl/lighting.hlsl.vert
                 res/light/data.inc
                 )
 
