@@ -1,6 +1,6 @@
 struct in_vertex {
-    [[vk::location(0)]] float3 position : POSITION;
-    [[vk::location(1)]] float4 color    : COLOR;
+    [[vk::location(0)]] double3 position : POSITION;
+    [[vk::location(2)]] float4 color     : COLOR;
 };
 
 struct out_pixel {
